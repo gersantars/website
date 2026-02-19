@@ -58,13 +58,10 @@ select {
 
 
 @media (max-width: 600px) {
-    .projects-table.header,
     .projects-table.row {
-        display: grid;
-        grid-template-columns: 1fr; /* todo en una columna */
-        gap: 0.5rem;
-        text-align: left;
+        gap: 0.3rem; /* reduce el espacio entre datos si quieres más compactado */
     }
+}
 
     .projects-table.header span {
         display: none; /* opcional: ocultar encabezados */
@@ -100,6 +97,7 @@ select {
   width: 200px;
   margin-right: 10px;
 }
+
 
 
 
