@@ -10,32 +10,22 @@ body {
   min-height: 100vh;
 }
 
+
 .filter button {
-  border: none;                /* Quita el borde predeterminado */
+  background: none;           /* Quita el borde predeterminado */
+  border: 1px solid #111;
   border-radius: 20px;         /* Redondea las esquinas */
-  padding: 10px 20px;          /* Opcional: mejora el espacio interno */
-  background: transparent;
-  margin-right: 1.5rem;
-  font-weight: 500;
-  position: relative;
+  padding: 6px 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.filter button::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 1px;
+.filter button:hover {
   background: #111;
-  transition: width 0.3s ease;
+  color: white;
 }
-
-.filter button:hover::after,
-.filter button.active::after {
-  width: 100%;
-}
-
 
 /* Degradado inferior */
 body::after {
@@ -198,6 +188,7 @@ select {
   height: auto;
   object-fit: cover;
 }
+
 
 
 
