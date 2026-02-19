@@ -28,6 +28,17 @@
     </div>
    </div>
   </nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
 
   /* Contenedor de la barra de navegación */
   .navbar {
@@ -95,6 +106,36 @@
     background-color: #e6e0f8;
     color: black;
   }
+</style>
+</head>
+<body>
+
+<!-- Barra de navegación -->
+<div class="navbar">
+  <div class="nav-about" onclick="scrollToSection('about')">About</div>
+  <div class="nav-projects" onclick="scrollToSection('projects')">Projects</div>
+  <div class="nav-draw" onclick="scrollToSection('draw')">Draw-Writing</div>
+</div>
+
+<!-- Secciones tipo página -->
+<div id="about" class="section about-section">
+  About Page
+</div>
+<div id="projects" class="section projects-section">
+  Projects Page
+</div>
+<div id="draw" class="section draw-section">
+  Draw-Writing Page
+</div>
+
+<script>
+  function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
 </style>
 </head>
 <body>
@@ -238,6 +279,7 @@ of three models of an intimate domestic space.
   <script src="js/script.js"></script>
 </body>
 </html>
+
 
 
 
