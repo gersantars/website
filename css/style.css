@@ -1,6 +1,6 @@
 /* BODY Y NAV */
 body {
-  font-family: serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 40px;
   color: #111;
 }
@@ -108,6 +108,7 @@ select {
     margin-bottom: 10px;
   }
 }
+
 
 
 
