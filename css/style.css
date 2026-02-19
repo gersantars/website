@@ -56,7 +56,7 @@ body::after {
 
 a {
   color: rgb(127 0 255);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .nav {
@@ -197,6 +197,7 @@ select {
   height: auto;
   object-fit: cover;
 }
+
 
 
 
