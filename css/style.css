@@ -134,15 +134,23 @@ select {
 /* RESPONSIVE PARA MÓVILES */
 @media (max-width: 600px) {
     .project-details-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;  /* una sola columna */
   }
 
   .project-text {
-    order: 2;
+    order: 1;
   }
 
   .projectsimages {
     order: 2;
+  }
+  
+  /* IMÁGENES GRANDES, NO ENCOGIDAS */
+  .projectsimages img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
   }
   
   .projects-table.header {
@@ -195,6 +203,7 @@ select {
   height: auto;
   object-fit: cover;
 }
+
 
 
 
