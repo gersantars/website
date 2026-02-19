@@ -97,7 +97,7 @@ a {
 }
 .nav-inner {
   width: 100%;
-  max-width: 1000px;     /* controla qué tan “a la derecha” se ve */
+  max-width: 1100px;     /* controla qué tan “a la derecha” se ve */
   margin: 0 auto;       /* centra el contenido */
   display: flex;
   justify-content: space-between;
@@ -246,6 +246,7 @@ select {
     padding: 0 24px;
   }
 }
+
 
 
 
