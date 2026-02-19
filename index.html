@@ -1,17 +1,129 @@
-/website
-│
-├─ index.html
-├─ projects.html
-├─ project.html
-├─ about.html
-├─ contact.html
-│
-├─ css/
-│   └─ style.css
-│
-├─ js/
-│   └─ script.js
-│
-└─ images/
-    ├─ placeholder1.jpg
-    ├─ placeholder2.jpg
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Geraldine Santillana — Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-left">Geraldine Santillana</div>
+    <div class="nav-right">
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Draw–Writing</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PROJECTS -->
+  <main class="projects-index">
+
+    <!-- FILTER -->
+    <div class="filter">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="collective">Collective</button>
+      <button data-filter="cultural">Cultural Management</button>
+    </div>
+
+    <!-- TABLE HEADER -->
+    <div class="projects-table header">
+      <span>Year</span>
+      <span>Title</span>
+      <span>Category</span>
+      <span>Authors</span>
+    </div>
+
+    <!-- PROJECT 1 -->
+    <div class="project" data-category="collective">
+      <div class="projects-table row">
+        <span>2020 - 2021</span>
+        <span>Ecosistemas Minerales</span>
+        <span>All </span>
+        <span> </span>
+      </div>
+
+      <div class="project-details">
+        <p>
+          From the dust in our flesh come minerals that return to the earth. The layers settle and return to our hands transformed into technological matter. 
+          What if what moves us is nothing more than the collaboration of these agents in deep strata that pulsate under our skin?
+        </p>
+
+        <div class="images">
+          <img src="images/project1.jpg" alt="">
+          <img src="images/project2.jpg" alt="">
+        </div>
+
+        <a class="see-more" href="#">See more →</a>
+      </div>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project" data-category="cultural">
+      <div class="projects-table row">
+        <span>2019</span>
+        <span>Orquidarium</span>
+        <span>All</span>
+        <span> </span>
+      </div>
+
+      <div class="project-details">
+        <p>
+          The world of orchids becomes a case study to
+discuss issues such as conservation, beauty and
+anthropocentrism. Orchids have been objects of
+contemplation, consumption and reproduction
+since the beginning of European colonialism and
+finally become an exotic object that has been
+brought to other territories to be domesticated. 
+        </p>
+
+        <div class="images">
+          <img src="images/project1.jpg" alt="">
+          <img src="images/project2.jpg" alt="">
+        </div>
+
+        <a class="see-more" href="#">See more →</a>
+      </div>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="project" data-category="all">
+      <div class="projects-table row">
+        <span>2019</span>
+        <span>Fragile</span>
+        <span>All</span>
+        <span> </span>
+      </div>
+
+      <div class="project-details">
+        <p>
+          Fragile focuses on human interrelationships of a
+romantic nature and the fiction created from
+them with an eagerness to tear apart
+appearances. In this case, the act of revealing the
+mythical aspect of love appears in the production
+of three models of an intimate domestic space.
+        </p>
+
+        <div class="images">
+          <img src="images/project1.jpg" alt="">
+          <img src="images/project2.jpg" alt="">
+        </div>
+
+        <a class="see-more" href="#">See more →</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
