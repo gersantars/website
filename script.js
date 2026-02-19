@@ -1,5 +1,6 @@
 const filter = document.getElementById("categoryFilter");
 const rows = document.querySelectorAll(".project-row");
+alert("JS cargado");
 
 filter.addEventListener("change", () => {
   rows.forEach(row => {
@@ -17,3 +18,4 @@ rows.forEach(row => {
       details.style.display === "block" ? "none" : "block";
   });
 });
+
