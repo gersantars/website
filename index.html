@@ -29,6 +29,102 @@
    </div>
   </nav>
 
+  /* Contenedor de la barra de navegación */
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 100;
+  }
+
+  /* Cada sección de la barra con color distinto */
+  .nav-about {
+    background-color: #6a0dad; /* violeta oscuro */
+    color: white;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .nav-projects {
+    background-color: #ffffff; /* blanco */
+    color: black;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .nav-draw {
+    background-color: #e6e0f8; /* grisáceo violeta muy claro */
+    color: black;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  /* Estilo para las “páginas” */
+  .section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    transition: transform 0.8s ease;
+  }
+
+  .about-section {
+    background-color: #6a0dad;
+    color: white;
+  }
+
+  .projects-section {
+    background-color: #ffffff;
+    color: black;
+  }
+
+  .draw-section {
+    background-color: #e6e0f8;
+    color: black;
+  }
+</style>
+</head>
+<body>
+
+<!-- Barra de navegación -->
+<div class="navbar">
+  <div class="nav-about" onclick="scrollToSection('about')">About</div>
+  <div class="nav-projects" onclick="scrollToSection('projects')">Projects</div>
+  <div class="nav-draw" onclick="scrollToSection('draw')">Draw-Writing</div>
+</div>
+
+<!-- Secciones tipo página -->
+<div id="about" class="section about-section">
+  About Page
+</div>
+<div id="projects" class="section projects-section">
+  Projects Page
+</div>
+<div id="draw" class="section draw-section">
+  Draw-Writing Page
+</div>
+
+<script>
+  function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+
+  
   <!-- PROJECTS -->
   <main class="projects-index">
 
@@ -142,6 +238,7 @@ of three models of an intimate domestic space.
   <script src="js/script.js"></script>
 </body>
 </html>
+
 
 
 
