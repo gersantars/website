@@ -40,13 +40,39 @@ select {
 .projects-table.header,
 .projects-table.row {
     display: grid;
-    grid-template-columns: 100px 1fr 150px 150px; /* columnas fijas y flexible */
-    column-gap: 3cm; /* separación entre columnas */
-    text-align: center; /* centra el texto dentro de cada columna */
+    grid-template-columns: minmax(60px, auto) 1fr minmax(80px, auto) minmax(80px, auto);
+    gap: 1.5rem; /* espacio flexible entre columnas */
+    text-align: center;
     padding: 10px 0;
     border-bottom: 1px solid #ccc;
-    align-items: center; /* centra verticalmente */
+    align-items: center;
 }
+
+
+@media (max-width: 600px) {
+    .projects-table.header,
+    .projects-table.row {
+        display: grid;
+        grid-template-columns: 1fr; /* todo en una columna */
+        gap: 0.5rem;
+        text-align: left;
+    }
+
+    .projects-table.header span {
+        display: none; /* opcional: ocultar encabezados */
+    }
+
+    .project-row span {
+        display: block; /* cada dato en su línea */
+    }
+
+    .project-details img {
+        width: 100%; /* imágenes adaptables */
+        height: auto;
+    }
+}
+
+
 
 .projects-table.header span {
     font-weight: bold;
@@ -66,4 +92,5 @@ select {
   width: 200px;
   margin-right: 10px;
 }
+
 
