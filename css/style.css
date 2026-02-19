@@ -10,6 +10,28 @@ body {
   min-height: 100vh;
 }
 
+.filter button {
+  background: none;
+  border: 1px solid #111;
+  padding: 6px 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.filter button:hover {
+  background: #111;
+  color: white;
+}
+
+.filter button.active {
+  background: rgba(189, 187, 246, 0.74);
+  border-color: rgba(189, 187, 246, 0.74);
+  color: #111;
+}
+
+
 /* Degradado inferior */
 body::after {
   content: "";
@@ -171,6 +193,7 @@ select {
   height: auto;
   object-fit: cover;
 }
+
 
 
 
