@@ -24,6 +24,14 @@ a {
   margin: auto;
 }
 
+.projects-index {
+    max-width: 1000px;
+    margin: auto; /* centra en pantalla grande */
+    padding: 0 0.5rem; /* 8px a cada lado, más espacio para el texto */
+}
+
+
+
 select {
   border: none;
   font-size: 16px;
@@ -92,5 +100,6 @@ select {
   width: 200px;
   margin-right: 10px;
 }
+
 
 
