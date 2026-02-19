@@ -22,14 +22,15 @@ body {
   transition: background 0.2s ease, color 0.2s ease;
 }
 
-.filter button:hover {
+/* Hover SOLO para botones que NO están activos */
+.filter button:not(.active):hover {
   background: #111;
   color: white;
 }
 
-.filter button.active {
+/* Hover del botón activo */
+.filter button.active:hover {
   background: rgba(189, 187, 246, 0.74);
-  border-color: rgba(189, 187, 246, 0.74);
   color: #111;
 }
 
@@ -194,6 +195,7 @@ select {
   height: auto;
   object-fit: cover;
 }
+
 
 
 
