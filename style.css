@@ -1,4 +1,5 @@
 body {
+  background: hotpink;
   font-family: serif;
   margin: 40px;
   color: #111;
@@ -52,3 +53,4 @@ select {
   width: 200px;
   margin-right: 10px;
 }
+
