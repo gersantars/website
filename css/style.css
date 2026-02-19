@@ -6,7 +6,7 @@ body {
 }
 
 a {
-  color: purple;
+  color: violet;
   text-decoration: none;
 }
 
@@ -108,6 +108,7 @@ select {
     margin-bottom: 10px;
   }
 }
+
 
 
 
