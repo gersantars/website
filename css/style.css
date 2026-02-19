@@ -89,14 +89,27 @@ select {
 
 .project-details {
   grid-column: 1 / -1;
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 0;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.project-details.open {
+  max-height: 1000px; /* lo suficientemente grande para mostrar todo */
   padding: 20px 0;
 }
+
+.projects-table.row span:nth-child(2) {
+  cursor: pointer; /* que se vea clickeable */
+}
+
 
 .project-details img {
   width: 200px;
   margin-right: 10px;
 }
+
 
 
 
