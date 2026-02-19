@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-left">Your Name</div>
+  <div class="nav-right">
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="#">Draw–Writing</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="projects-index">
+
+  <select id="categoryFilter">
+    <option value="all">All</option>
+    <option value="collective">Collective</option>
+    <option value="cultural">Cultural Management</option>
+  </select>
+
+  <div class="projects-table">
+
+    <div class="projects-header">
+      <span>Year</span>
+      <span>Title</span>
+      <span>Category</span>
+      <span>Authors</span>
+    </div>
+
+    <!-- ALL (10 total) -->
+    <div class="project-row" data-category="all">
+      <span>2025</span>
+      <span class="expand">Project One</span>
+      <span>All</span>
+      <span>—</span>
+      <div class="project-details">
+        <p>Short description of the project.</p>
+        <img src="images/placeholder1.jpg">
+        <img src="images/placeholder2.jpg">
+        <a href="project.html">See more</a>
+      </div>
+    </div>
+
+    <!-- Repeat ALL projects -->
+    <!-- … duplicate 9 times changing title/year -->
+
+    <!-- COLLECTIVE (3) -->
+    <div class="project-row" data-category="collective">
+      <span>2024</span>
+      <span class="expand">Collective Project</span>
+      <span>Collective</span>
+      <span>Name A, Name B</span>
+      <div class="project-details">
+        <p>Collaborative research project.</p>
+        <img src="images/placeholder1.jpg">
+        <img src="images/placeholder2.jpg">
+        <a href="project.html">See more</a>
+      </div>
+    </div>
+
+    <!-- CULTURAL MANAGEMENT (1) -->
+    <div class="project-row" data-category="cultural">
+      <span>2023</span>
+      <span class="expand">Cultural Program</span>
+      <span>Cultural Management</span>
+      <span>Name C</span>
+      <div class="project-details">
+        <p>Curatorial and cultural management project.</p>
+        <img src="images/placeholder1.jpg">
+        <img src="images/placeholder2.jpg">
+        <a href="project.html">See more</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
+
