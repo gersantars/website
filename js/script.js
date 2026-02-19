@@ -8,20 +8,30 @@ if (filter) {
       const category = project.dataset.category;
       project.style.display =
         filter.value === "all" || category === filter.value ? "grid" : "none";
+
+      // Cerrar detalles al filtrar
+      const details = project.querySelector(".project-details");
+      details.classList.remove("open");
     });
   });
 }
 
-// Desplegar detalles con animación
+// Acordeón: abrir un proyecto y cerrar los demás
 projects.forEach(project => {
   const title = project.querySelector(".projects-table.row span:nth-child(2)");
   const details = project.querySelector(".project-details");
 
   if (title && details) {
-    title.style.cursor = "pointer"; // que se vea clickeable
-
     title.addEventListener("click", () => {
-      details.classList.toggle("open"); // agrega/quita la clase "open"
+      // Cerrar todos los demás detalles
+      projects.forEach(p => {
+        if (p !== project) {
+          p.querySelector(".project-details").classList.remove("open");
+        }
+      });
+
+      // Alternar este detalle
+      details.classList.toggle("open");
     });
   }
 });
