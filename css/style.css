@@ -169,10 +169,9 @@ select {
   }
 
   .project-details img {
-    width: 100%; /* imágenes ocupan todo el ancho del móvil */
-    height: auto;
-    margin-right: 0;
-    margin-bottom: 10px;
+  .project-details img {
+    width: 100%;
+  }
   }
 }
 
@@ -203,6 +202,7 @@ select {
   height: auto;
   object-fit: cover;
 }
+
 
 
 
