@@ -138,7 +138,7 @@ select {
   }
 
   .project-text {
-    order: 1;
+    order: 2;
   }
 
   .projectsimages {
@@ -195,6 +195,7 @@ select {
   height: auto;
   object-fit: cover;
 }
+
 
 
 
