@@ -1,3 +1,4 @@
+/* BODY Y NAV */
 body {
   font-family: serif;
   margin: 40px;
@@ -19,19 +20,14 @@ a {
   margin-left: 20px;
 }
 
+/* CONTENEDOR DE PROYECTOS */
 .projects-index {
   max-width: 1000px;
-  margin: auto;
+  margin: auto; 
+  padding: 0 0.5rem; /* pequeño padding lateral para móviles */
 }
 
-.projects-index {
-    max-width: 1000px;
-    margin: auto; /* centra en pantalla grande */
-    padding: 0 0.5rem; /* 8px a cada lado, más espacio para el texto */
-}
-
-
-
+/* SELECT / FILTRO */
 select {
   border: none;
   font-size: 16px;
@@ -39,54 +35,35 @@ select {
 }
 
 .filter {
-    display: flex;
-    gap: 1rem; /* espacio entre botones */
-    margin-bottom: 20px;
-    justify-content: start; /* alineado al inicio de la tabla */
+  display: flex;
+  gap: 1rem; 
+  margin-bottom: 20px;
+  justify-content: start; 
 }
 
+/* TABLA DE PROYECTOS */
 .projects-table.header,
 .projects-table.row {
-    display: grid;
-    grid-template-columns: minmax(60px, auto) 1fr minmax(80px, auto) minmax(80px, auto);
-    gap: 1.5rem; /* espacio flexible entre columnas */
-    text-align: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-    align-items: center;
+  display: grid;
+  grid-template-columns: minmax(60px, auto) 1fr minmax(80px, auto) minmax(80px, auto);
+  gap: 1.5rem; /* espacio flexible entre columnas */
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
 }
 
-
-@media (max-width: 600px) {
-    .projects-table.row {
-        gap: 0.3rem; /* reduce el espacio entre datos si quieres más compactado */
-    }
-}
-
-    .projects-table.header span {
-        display: none; /* opcional: ocultar encabezados */
-    }
-
-    .project-row span {
-        display: block; /* cada dato en su línea */
-    }
-
-    .project-details img {
-        width: 100%; /* imágenes adaptables */
-        height: auto;
-    }
-}
-
-
-
+/* Encabezados */
 .projects-table.header span {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-.expand {
-  cursor: pointer;
+/* Clickable titles */
+.projects-table.row span:nth-child(2) {
+  cursor: pointer; 
 }
 
+/* DETALLES (ACORDEÓN) */
 .project-details {
   grid-column: 1 / -1;
   max-height: 0;
@@ -96,20 +73,41 @@ select {
 }
 
 .project-details.open {
-  max-height: 1000px; /* lo suficientemente grande para mostrar todo */
+  max-height: 1500px; /* suficiente para todo el contenido */
   padding: 20px 0;
 }
 
-.projects-table.row span:nth-child(2) {
-  cursor: pointer; /* que se vea clickeable */
-}
-
-
+/* IMÁGENES */
 .project-details img {
   width: 200px;
+  height: auto;
   margin-right: 10px;
 }
 
+/* RESPONSIVE PARA MÓVILES */
+@media (max-width: 600px) {
+  .projects-table.header {
+    display: none; /* ocultamos encabezados */
+  }
+
+  .projects-table.row {
+    display: grid;
+    grid-template-columns: 1fr; /* una sola columna */
+    gap: 0.3rem;
+    text-align: left;
+  }
+
+  .projects-table.row span {
+    display: block; /* cada dato en línea separada */
+  }
+
+  .project-details img {
+    width: 100%; /* imágenes ocupan todo el ancho del móvil */
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
 
 
 
