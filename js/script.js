@@ -35,3 +35,14 @@ projects.forEach(project => {
     });
   }
 });
+
+const filterButtons = document.querySelectorAll(".filter button");
+
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    // quitar activo a todos
+    filterButtons.forEach(b => b.classList.remove("active"));
+    // activar el clickeado
+    button.classList.add("active");
+  });
+});
