@@ -11,9 +11,10 @@ body {
 }
 
 .filter button {
-  border: none;
+  border: none;                /* Quita el borde predeterminado */
+  border-radius: 20px;         /* Redondea las esquinas */
+  padding: 10px 20px;          /* Opcional: mejora el espacio interno */
   background: transparent;
-  padding: 6px 0;
   margin-right: 1.5rem;
   font-weight: 500;
   position: relative;
@@ -197,6 +198,7 @@ select {
   height: auto;
   object-fit: cover;
 }
+
 
 
 
