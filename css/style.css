@@ -6,8 +6,8 @@ body {
 }
 
 a {
-  color: magenta;
-  text-decoration: none;
+  color: rgb(127 0 255);
+  text-decoration: underline;
 }
 
 .nav {
@@ -108,6 +108,7 @@ select {
     margin-bottom: 10px;
   }
 }
+
 
 
 
