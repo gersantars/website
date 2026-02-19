@@ -30,12 +30,26 @@ select {
   margin-bottom: 30px;
 }
 
-.projects-header,
-.project-row {
-  display: grid;
-  grid-template-columns: 80px 1fr 200px 200px;
-  padding: 10px 0;
-  border-bottom: 1px solid #ccc;
+.filter {
+    display: flex;
+    gap: 1rem; /* espacio entre botones */
+    margin-bottom: 20px;
+    justify-content: start; /* alineado al inicio de la tabla */
+}
+
+.projects-table.header,
+.projects-table.row {
+    display: grid;
+    grid-template-columns: 100px 1fr 150px 150px; /* columnas fijas y flexible */
+    column-gap: 3cm; /* separación entre columnas */
+    text-align: center; /* centra el texto dentro de cada columna */
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    align-items: center; /* centra verticalmente */
+}
+
+.projects-table.header span {
+    font-weight: bold;
 }
 
 .expand {
@@ -52,3 +66,4 @@ select {
   width: 200px;
   margin-right: 10px;
 }
+
