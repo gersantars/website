@@ -241,8 +241,8 @@ body {
 }
 
 .accordion-header .subtitle {
-  font-size: 14px;
-  opacity: 0.7;
+  font-size: 20px;
+  opacity: 0.8;
 }
 
 .accordion-content {
@@ -256,6 +256,7 @@ body {
   max-height: 3000px; /* grande a propósito */
   padding: 30px;
 }
+
 
 
 
