@@ -16,6 +16,11 @@ if (filter) {
   });
 }
 
+// Acordeón: abrir barras draw
+document.querySelector('.draw h1').addEventListener('click', () => {
+  document.querySelector('.draw').classList.toggle('open');
+});
+
 // Acordeón: abrir un proyecto y cerrar los demás
 projects.forEach(project => {
   const title = project.querySelector(".projects-table.row span:nth-child(2)");
@@ -46,3 +51,4 @@ filterButtons.forEach(button => {
     button.classList.add("active");
   });
 });
+
