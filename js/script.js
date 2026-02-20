@@ -52,3 +52,25 @@ filterButtons.forEach(button => {
   });
 });
 
+// Accordion general
+const headers = document.querySelectorAll('.accordion-header');
+
+headers.forEach(header => {
+  header.addEventListener('click', () => {
+    const parent = header.parentElement;
+    const content = parent.querySelector('.accordion-content');
+
+    // Cerrar los demás
+    document.querySelectorAll('.accordion-content').forEach(c => {
+      if(c !== content) c.classList.remove('open');
+    });
+
+    // Abrir o cerrar este
+    content.classList.toggle('open');
+
+    // Si es Draw-Writing, ajusta altura
+    if(parent.classList.contains('draw')) {
+      parent.classList.toggle('open');
+    }
+  });
+});
