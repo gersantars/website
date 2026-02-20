@@ -230,7 +230,7 @@ body {
   grid-template-columns: auto 1fr;
   gap: 2rem;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
   cursor: pointer;
   background: #fff;
 }
@@ -241,21 +241,22 @@ body {
 }
 
 .accordion-header .subtitle {
-  font-size: 20px;
-  opacity: 0.8;
+  font-size: 16px;
+  opacity: 0.9;
 }
 
 .accordion-content {
   max-height: 0;
   overflow: hidden;
-  padding: 0 30px;
+  padding: 0 20px;
   transition: max-height 0.6s ease, padding 0.6s ease;
 }
 
 .accordion-content.open {
   max-height: 3000px; /* grande a propósito */
-  padding: 30px;
+  padding: 20px;
 }
+
 
 
 
