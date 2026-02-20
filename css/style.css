@@ -9,6 +9,70 @@ body {
   position: relative;
   min-height: 100vh;
 }
+///////////////////ESTO ES NUEVO-LIBRO////
+body {
+  margin: 0;
+  font-family: serif;
+}
+
+.book {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo base */
+.tab {
+  padding: 30px;
+}
+
+/* Títulos */
+.tab h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.tab p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* COLORES */
+.about {
+  background: #6a0dad;
+  color: white;
+}
+
+
+
+.projects {
+  background: white;
+  color: black;
+  flex: 1; /* ESTA es la clave: se abre */
+}
+
+.draw {
+  background: #ede8f7;
+  color: black;
+}
+
+/* Estados */
+.closed {
+  height: 90px; /* pestaña cerrada */
+}
+
+.active {
+  box-shadow: 0 -10px 20px rgba(0,0,0,0.15);
+}
+
+/* Contenido interno de projects */
+.content {
+  margin-top: 40px;
+}
+
+///////////////////ESTO ES NUEVO-LIBRO////
 
 body {
   padding-bottom: 80px; /* altura aproximada de la nav */
@@ -241,6 +305,7 @@ select {
     padding: 0 24px;
   }
 }
+
 
 
 
