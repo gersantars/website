@@ -53,20 +53,6 @@ body {
 }
 
 
-.about {
-  background: none;
-  color: black;
-}
-
-.projects {
-  background: none;
-}
-
-.draw-writing {
-  background: gray;
-}
-
-
 
 /* Sombra clara para pestaña activa */
 .tab.active {
@@ -235,6 +221,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
