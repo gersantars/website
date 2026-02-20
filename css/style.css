@@ -44,7 +44,7 @@ body {
 /* COLORES */
 .about {
   background: white;
-  color: white;
+  color: black;
 }
 
 .projects {
@@ -308,6 +308,7 @@ select {
     padding: 0 24px;
   }
 }
+
 
 
 
