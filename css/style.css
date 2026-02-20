@@ -134,8 +134,7 @@ body {
   align-items: center;
   padding: 0.8rem 0;
   border-bottom: 1px solid rgba(0,0,0,0.2);
-  
-  background: white;  /* opcional para que no se vea detrás del scroll */
+  background: transparent;
   position: sticky;   /* hace que permanezca visible si quieres */
   top: 0;             /* opcional */
   z-index: 1;         /* que esté arriba del scroll */
@@ -244,7 +243,22 @@ body {
   margin: 0; 
 }
 
+.draw {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;      /* cerrado */
+  background: #fff;  /* o un degradado semitransparente si quieres */
+  border-top: 1px solid rgba(0,0,0,0.1);
+  transition: height 0.5s ease;
+  z-index: 10;
+  overflow: hidden;
+}
 
+.draw.open {
+  height: 60vh;       /* altura cuando se despliega */
+}
 
 
   .projects-table.header {
@@ -260,6 +274,8 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+
 
 
 
