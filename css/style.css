@@ -136,6 +136,20 @@ body {
   border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
+.projects-table.row span:first-child {  /* fecha */
+  font-size: 0.85rem;  /* más pequeño */
+  opacity: 0.7;        /* un poco más sutil */
+}
+
+.project-text .see-more {
+  font-size: 0.9rem;   /* más pequeño que el texto principal */
+  display: inline-block;
+  margin-top: 1rem;    /* separa de párrafo */
+  text-decoration: none;
+  color: #111;
+  font-weight: bold;
+}
+
 /* Encabezados */ 
 .projects-table.header span { 
   font-weight: bold; } 
@@ -169,6 +183,13 @@ body {
   padding: 20px 0;
 }
 
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* empuja See more al final */
+}
+
 /* IMAGES */
 .projectsimages img {
   width: 100%;
@@ -195,6 +216,12 @@ body {
   /* TEXTO */
   .project-text { order: 1; /* texto primero */  
   } 
+  .project-text p {
+  font-size: 1.25rem;  /* más grande que 1.1rem */
+  color: #111;          /* negro sólido */
+  line-height: 1.7;     /* un poco más espacioso */
+}
+  
   
  /* IMÁGENES */ 
   .projectsimages { 
@@ -223,6 +250,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
