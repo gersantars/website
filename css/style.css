@@ -117,10 +117,10 @@ body {
 .filter button.active {
   background: rgba(189, 187, 246, 0.45);
   box-shadow:
-    0 6px 14px rgb(211, 251, 93),
+    0 8px 16px rgb(211, 251, 93),
     0 1px 0 rgba(255,255,255,0.6) inset;
   border-color: rgba(0,0,0,0.5);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 /* TABLA DE PROYECTOS */
@@ -221,6 +221,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
