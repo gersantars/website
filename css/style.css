@@ -40,8 +40,8 @@ body {
 
 /* STATES */
 .projects {
-  height: 40vh;         /* altura fija */
-  overflow-y: auto;     /* agrega scroll cuando el contenido excede */
+  flex: unset;
+  height: auto;  /* crece según el contenido */
   pointer-events: auto;
   background: linear-gradient(
     to top,
@@ -134,6 +134,11 @@ body {
   align-items: center;
   padding: 0.8rem 0;
   border-bottom: 1px solid rgba(0,0,0,0.2);
+  
+  background: white;  /* opcional para que no se vea detrás del scroll */
+  position: sticky;   /* hace que permanezca visible si quieres */
+  top: 0;             /* opcional */
+  z-index: 1;         /* que esté arriba del scroll */
 }
 
 .projects-table.row span:first-child {  /* fecha */
@@ -160,6 +165,11 @@ body {
 
 /* DETAILS ACORDEÓN */
 .project-details {
+  max-height: 400px;      /* altura máxima visible del detalle */
+  overflow-y: auto;       /* scroll solo aquí */
+  padding: 20px 0;
+  transition: max-height 0.5s ease, padding 0.5s ease; 
+  
   font-size: 1.1rem;
   line-height: 1.65;
   letter-spacing: 0.01em;
@@ -250,6 +260,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
