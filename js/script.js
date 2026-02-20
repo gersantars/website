@@ -16,10 +16,6 @@ if (filter) {
   });
 }
 
-// Acordeón: abrir barras draw
-document.querySelector('.draw h1').addEventListener('click', () => {
-  document.querySelector('.draw').classList.toggle('open');
-});
 
 // Acordeón: abrir un proyecto y cerrar los demás
 projects.forEach(project => {
@@ -57,20 +53,22 @@ const headers = document.querySelectorAll('.accordion-header');
 
 headers.forEach(header => {
   header.addEventListener('click', () => {
-    const parent = header.parentElement;
-    const content = parent.querySelector('.accordion-content');
+    const item = header.parentElement;
+    const content = item.querySelector('.accordion-content');
 
-    // Cerrar los demás
+    // cerrar todos
     document.querySelectorAll('.accordion-content').forEach(c => {
-      if(c !== content) c.classList.remove('open');
+      if (c !== content) c.classList.remove('open');
     });
 
-    // Abrir o cerrar este
+    // abrir este
     content.classList.toggle('open');
+  });
+});;
 
     // Si es Draw-Writing, ajusta altura
     if(parent.classList.contains('draw')) {
       parent.classList.toggle('open');
     }
-  });
-});
+
+
