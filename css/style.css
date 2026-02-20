@@ -245,49 +245,61 @@ body {
   opacity: 0.9;
 }
 
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  padding: 0 20px;
-  transition: max-height 0.6s ease, padding 0.6s ease;
+/* ABOUT FULLSCREEN */
+.about .accordion-content {
+  padding: 0;              /* elimina padding del acordeón */
 }
-
 .accordion-content.open {
-  max-height: 3000px; /* grande a propósito */
-  padding: 20px;
+  max-height: none;   /* deja crecer libre */
 }
-
 
 .about-video-wrapper {
   position: relative;
   width: 100%;
-  min-height: 60vh;
+  height: 100vh;           /* PANTALLA COMPLETA */
   overflow: hidden;
 }
 
 /* VIDEO */
 .about-video-wrapper video {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.25;       /* muy importante */
+  opacity: 0.3;
   pointer-events: none;
 }
 
-/* CONTENIDO */
+/* TEXTO SOBRE EL VIDEO */
 .about-content {
   position: relative;
   z-index: 2;
   max-width: 800px;
-  font-size: 1.1rem;
+  margin: 0 auto;
+  padding: 80px 30px;
+  font-size: 1.15rem;
   line-height: 1.7;
+  color: #111;
 }
 
+@media (max-width: 600px) {
+  .about-video-wrapper {
+    height: auto;
+    min-height: 60vh;
+    background-image: url("images/about-poster.jpg");
+    background-size: cover;
+    background-position: center;
+  }
 
+  .about-video-wrapper video {
+    display: none;
+  }
 
+  .about-content {
+    padding: 60px 20px;
+  }
+}
 
 
 
