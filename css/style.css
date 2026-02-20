@@ -42,7 +42,6 @@ body {
 .projects {
   flex: 1;
   height: 40vh; /* 1/5 de la pantalla */
-  pointer-events: none; /* no bloquea clicks */
   background: linear-gradient(
     to top,
     rgba(179, 172, 227, 0.5),
@@ -223,6 +222,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
