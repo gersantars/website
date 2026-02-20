@@ -157,7 +157,7 @@ body {
 /* GRID INTERNO DEL DESPLEGABLE — DESKTOP */
 .project-details.open {
   max-height: 1500px; 
-  padding:20px 0,
+  padding:20px 0; 
 }
 
 .project-details-grid {
@@ -221,6 +221,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
