@@ -154,7 +154,7 @@ body {
 .projects-table.header span { 
   font-weight: bold; } 
 /* Clickable titles */ 
-.projects-table.row span:nth-child(2) { 
+.projects-table.row span{ 
   cursor: pointer; 
 }
 
@@ -250,6 +250,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
