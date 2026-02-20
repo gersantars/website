@@ -41,6 +41,8 @@ body {
 /* STATES */
 .projects {
   flex: 1;
+  height: 40vh; /* 1/5 de la pantalla */
+  pointer-events: none; /* no bloquea clicks */
   background: linear-gradient(
     to top,
     rgba(179, 172, 227, 0.5),
@@ -117,7 +119,7 @@ body {
 .filter button.active {
   background: rgba(189, 187, 246, 0.45);
   box-shadow:
-    0 8px 16px rgba(230, 255, 43,0.7),
+    0 8px 16px rgba(230, 255, 43,0.4),
     0 1px 0 rgba(201, 255, 54,0.6) inset;
   border-color: rgba(0,0,0,0.5);
   transform: translateY(-2px);
@@ -221,6 +223,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
