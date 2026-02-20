@@ -1,46 +1,55 @@
-/* BODY Y NAV */
-body {
-  font-family: 'Montserrat', sans-serif;
-  margin: 30px;
-  color: #111;
-}
-
-body {
-  position: relative;
-  min-height: 100vh;
-}
-
-
-
+/* RESET */
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  color: #111;
 }
 
+/* BOOK STRUCTURE */
 .book {
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* Estilo base */
+/* TABS */
 .tab {
   padding: 30px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-.tab > h1,
-.tab > p {
+/* Align tabs with content width */
+.tab h1,
+.tab p {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.tab {
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+.tab h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
 }
 
-.tab::after {
-  display: none;
+.tab p {
+  margin: 6px 0 0;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* STATES */
+.projects {
+  flex: 1;
+  background: linear-gradient(
+    to top,
+    rgba(189, 187, 246, 0.5),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.closed {
+  height: 90px;
 }
 
 .tab.active::after {
@@ -54,255 +63,76 @@ body {
   );
 }
 
-/* Títulos */
-.tab h1 {
-  margin: 0;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.tab p {
-  margin: 5px 0 0;
-  font-size: 20px;
-  opacity: 0.7;
-}
-
-/* COLORES */
-.about {
-  background: white;
-  color: black;
-}
-
-.projects {
-  background: white;
-  color: black;
-  flex: 1; /* ESTA es la clave: se abre */
-    background: linear-gradient(
-    to top,
-    rgba(189, 187, 246, 0.74),
-    rgba(255, 255, 255, 0)
-  );
-}
-
-.draw {
-  background: white;
-  color: black;
-}
-
-/* Estados */
-.closed {
-  height: 90px; /* pestaña cerrada */
-}
-
-.active {
-  box-shadow: 0 -10px 20px rgba(0,0,0,0.15);
-}
-
-/* Contenido interno de projects */
+/* CONTENT */
 .content {
   margin-top: 40px;
 }
 
-
-
-
-
-
-body {
-  padding-bottom: 80px; /* altura aproximada de la nav */
-}
-
-.active {
-  box-shadow: 0 -10px 20px rgba(0,0,0,0.15);
- } 
-
-.filter button {
-  background: none;           /* Quita el borde predeterminado */
-  border: 1px solid #111;
-  border-radius: 20px;         /* Redondea las esquinas */
-  font-weight: bold;
-  padding: 6px 14px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-/* Hover SOLO para botones que NO están activos */
-.filter button:not(.active):hover {
-  background: #111;
-  color: white;
-}
-
-/* Hover del botón activo */
-.filter button.active:hover {
-  background: rgba(189, 187, 246, 0.74);
-  color: #111;
-}
-
-
-
-a {
-  color: rgb(127 0 255);
-  text-decoration: none;
-}
-
-.nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  font-weight: 600;
-  background: #000;
-  color: white;
-  align-items: center;
-  padding: 16px 40px;
-  z-index: 1000;
-}
-
-.nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.02em; /* MUY recomendado */
-}
-
-.nav a:hover {
-  text-decoration: underline;
-}
-
-.nav-left {
-  font-weight: 750;
-  font-size: 0.9rem;
-}
-.nav-inner {
-  width: 100%;
-  max-width: 1100px;     /* controla qué tan “a la derecha” se ve */
-  margin: 0 auto;       /* centra el contenido */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-right {
-  display: flex;
-  gap: 28px; /* prueba 24–32 */
-}
-
-/* CONTENEDOR DE PROYECTOS */
+/* PROJECTS */
 .projects-index {
   max-width: 1000px;
-  margin: auto; 
-  padding: 0 0.5rem; /* pequeño padding lateral para móviles */
+  margin: auto;
+  padding: 0 0.5rem;
 }
 
-/* SELECT / FILTRO */
-select {
-  border: none;
-  font-size: 16px;
-  margin-bottom: 30px;
-}
-
+/* FILTER */
 .filter {
   display: flex;
-  gap: 1rem; 
+  gap: 1rem;
   margin-bottom: 20px;
-  justify-content: start; 
 }
 
-/* TABLA DE PROYECTOS */
+.filter button {
+  background: none;
+  border: 1px solid #111;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.filter button.active {
+  background: rgba(189, 187, 246, 0.6);
+}
+
+/* TABLE */
 .projects-table.header,
 .projects-table.row {
   display: grid;
-  grid-template-columns: minmax(60px, auto) 1fr minmax(80px, auto) minmax(80px, auto);
-  gap: 1.5rem; /* espacio flexible entre columnas */
-  text-align: center;
+  grid-template-columns: minmax(60px, auto) 1fr minmax(80px, auto);
+  gap: 1.5rem;
   padding: 10px 0;
   border-bottom: 1px solid #ccc;
-  align-items: center;
 }
 
-/* Encabezados */
-.projects-table.header span {
-  font-weight: bold;
-}
-
-/* Clickable titles */
-.projects-table.row span:nth-child(2) {
-  cursor: pointer; 
-}
-
-/* DETALLES (ACORDEÓN) */
+/* DETAILS */
 .project-details {
-  grid-column: 1 / -1;
   max-height: 0;
   overflow: hidden;
-  padding: 0 0;
-  transition: max-height 0.5s ease, padding 0.5s ease;
+  transition: max-height 0.4s ease;
 }
 
 .project-details.open {
-  max-height: 1500px; /* suficiente para todo el contenido */
-  padding: 20px 0;
+  max-height: 1500px;
 }
 
-/* IMÁGENES */
-.project-details img {
-  width: 200px;
-  height: auto;
-  margin-right: 10px;
-}
-
-/* GRID INTERNO DEL DESPLEGABLE — DESKTOP */
 .project-details-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  align-items: start;
+  padding: 20px 0;
 }
 
-/* TEXTO */
-.project-text p {
-  margin-top: 0;
-  line-height: 1.5;
-}
-
-/* IMÁGENES */
-.projectsimages {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
+/* IMAGES */
 .projectsimages img {
   width: 100%;
   height: auto;
-  object-fit: cover;
 }
 
-/* ============================= */
-/* RESPONSIVE PARA MÓVILES */
-/* ============================= */
+/* RESPONSIVE */
 @media (max-width: 600px) {
-
   .project-details-grid {
-    grid-template-columns: 1fr; /* UNA SOLA COLUMNA */
-  }
-
-  .project-text {
-    order: 1; /* texto primero */
-  }
-
-  .projectsimages {
-    order: 2; /* imágenes después */
-  }
-
-  .projectsimages img {
-    width: 100%;
-    height: auto;
-    margin: 0;
+    grid-template-columns: 1fr;
   }
 
   .projects-table.header {
@@ -311,31 +141,8 @@ select {
 
   .projects-table.row {
     grid-template-columns: 1fr;
-    text-align: left;
-  }
-    .nav {
-    padding: 12px 20px;
-  }
-
-  .nav-right a {
-    margin-left: 12px;
-    font-size: 0.75rem;
   }
 }
-
-@media (min-width: 1024px) {
-  .nav-inner {
-    padding: 0 24px;
-  }
-}
-
-
-
-
-
-
-
-
 
 
 
