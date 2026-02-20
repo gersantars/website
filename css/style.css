@@ -121,15 +121,18 @@ body {
   border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
-/* DETAILS */
+/* DETAILS ACORDEÓN */
 .project-details {
+  grid-column:1/-1;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease;
+  padding:0 0;
+  transition: max-height 0.5s ease, padding 0.5s ease; 
 }
 
 .project-details.open {
-  max-height: 1500px;
+  max-height: 1500px; 
+  padding:20px 0,
 }
 
 .project-details-grid {
@@ -143,22 +146,52 @@ body {
 .projectsimages img {
   width: 100%;
   height: auto;
+  margin-right: 10px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
-  .project-details-grid {
-    grid-template-columns: 1fr;
+
+.projectsimages img { 
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; } 
+
+/* RESPONSIVE PARA MÓVILES */ 
+@media (max-width: 600px) { 
+  .project-details-grid { 
+    grid-template-columns: 1fr; 
+    } 
+  
+    /* UNA SOLA COLUMNA */ 
+  
+  .project-text { order: 1; /* texto primero */  
+  } 
+  .projectsimages { 
+    order: 2; /* imágenes después */ 
   }
+
+.projectsimages img { 
+  width: 100%; 
+  height: auto; 
+  margin: 0; 
+}
+
+
+
 
   .projects-table.header {
     display: none;
+  }
+
+  /* Encabezados */ 
+  .projects-table.header span { 
+    font-weight: bold; 
   }
 
   .projects-table.row {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
