@@ -43,7 +43,7 @@ body {
 
 /* COLORES */
 .about {
-  background: #6a0dad;
+  background: white;
   color: white;
 }
 
@@ -54,7 +54,7 @@ body {
 }
 
 .draw {
-  background: #ede8f7;
+  background: white;
   color: black;
 }
 
@@ -308,6 +308,7 @@ select {
     padding: 0 24px;
   }
 }
+
 
 
 
