@@ -67,6 +67,11 @@ body {
   background: white;
   color: black;
   flex: 1; /* ESTA es la clave: se abre */
+    background: linear-gradient(
+    to top,
+    rgba(189, 187, 246, 0.74),
+    rgba(255, 255, 255, 0)
+  );
 }
 
 .draw {
@@ -329,6 +334,7 @@ select {
     padding: 0 24px;
   }
 }
+
 
 
 
