@@ -127,6 +127,12 @@ body {
 
 /* TABLA DE PROYECTOS */
 .projects-table.header,
+.projects-table.row,
+.projects-table.row span,
+.projects-table.header span {
+  background: transparent;
+}
+.projects-table.header,
 .projects-table.row {
   display: grid;
   grid-template-columns: 80px 1fr 200px;
@@ -274,6 +280,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
