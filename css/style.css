@@ -81,10 +81,15 @@ body {
   padding-bottom: 80px; /* altura aproximada de la nav */
 }
 
+.active {
+  box-shadow: 0 -10px 20px rgba(0,0,0,0.15);
+ } 
+
 .filter button {
   background: none;           /* Quita el borde predeterminado */
   border: 1px solid #111;
   border-radius: 20px;         /* Redondea las esquinas */
+  font-weight: bold;
   padding: 6px 14px;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.85rem;
@@ -308,6 +313,7 @@ select {
     padding: 0 24px;
   }
 }
+
 
 
 
