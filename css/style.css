@@ -52,24 +52,6 @@ body {
   height: 90px;
 }
 
-.section-bar {
-  padding: 1.2rem 2rem;
-  border-bottom: 1px solid rgba(0,0,0,0.3);
-  cursor: pointer;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.section-bar:hover {
-  box-shadow:
-    0 4px 8px rgba(0,0,0,0.2);
-}
-
-.section-bar.active {
-  box-shadow: 
-    0 6px 12px rgba(0,0,0,0.25);
-  z-index: 2;
-}
 
 .about {
   background: none;
@@ -253,6 +235,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
