@@ -40,9 +40,9 @@ body {
 
 /* STATES */
 .projects {
-  flex: 1;
-  height: 40vh; /* 1/5 de la pantalla */
-  pointer-events: auto; /* permite clicks */
+  height: 40vh;         /* altura fija */
+  overflow-y: auto;     /* agrega scroll cuando el contenido excede */
+  pointer-events: auto;
   background: linear-gradient(
     to top,
     rgba(179, 172, 227, 0.5),
@@ -250,6 +250,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
