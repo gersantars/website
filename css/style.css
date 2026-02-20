@@ -149,6 +149,7 @@ body {
   transition: max-height 0.5s ease, padding 0.5s ease; 
 }
 
+/* GRID INTERNO DEL DESPLEGABLE — DESKTOP */
 .project-details.open {
   max-height: 1500px; 
   padding:20px 0,
@@ -175,15 +176,20 @@ body {
   object-fit: cover; } 
 
 /* RESPONSIVE PARA MÓVILES */ 
+
 @media (max-width: 600px) { 
+/* GRID INTERNO DEL DESPLEGABLE — MÓVILES */
   .project-details-grid { 
     grid-template-columns: 1fr; 
     } 
   
     /* UNA SOLA COLUMNA */ 
   
+  /* TEXTO */
   .project-text { order: 1; /* texto primero */  
   } 
+  
+ /* IMÁGENES */ 
   .projectsimages { 
     order: 2; /* imágenes después */ 
   }
@@ -210,6 +216,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
