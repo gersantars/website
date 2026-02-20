@@ -93,6 +93,9 @@ body {
 
 .filter button.active {
   background: rgba(189, 187, 246, 0.6);
+    box-shadow: 
+    0 2px 6px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0,0,0,0.4);
 }
 
 /* TABLE */
@@ -143,6 +146,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
