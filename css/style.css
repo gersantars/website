@@ -89,6 +89,7 @@ body {
   padding: 6px 14px;
   font-size: 0.85rem;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .filter button.active {
@@ -146,6 +147,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
