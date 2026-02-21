@@ -360,7 +360,7 @@ body {
 
 .about-subtitle {
   font-size: clamp(2.5rem, 6vw, 6rem);
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   letter-spacing: 0.12em;
 }
 
@@ -374,6 +374,7 @@ body {
     margin-bottom: 2rem;
   }
 }
+
 
 
 
