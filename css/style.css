@@ -233,9 +233,9 @@ body {
 }
 
 .accordion-item .subtitle {
-  font-size: 45px;
+  font-size: 20px;
   font-family: 'Source Sans 3', sans-serif;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .accordion-header {
@@ -351,6 +351,7 @@ body {
   margin: 0 0 2rem 0;
   opacity: 0.85;
 }
+
 
 
 
