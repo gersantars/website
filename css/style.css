@@ -55,7 +55,7 @@ body {
   border-radius: 20px;
   padding: 6px 14px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
+  font-size: 1rem;
   cursor: pointer;
   font-weight: bold;
   transition: background 0.2s ease, color 0.2s ease;
@@ -101,12 +101,12 @@ body {
 }
 
 .projects-table.row span:first-child {  /* fecha */
-  font-size: 2rem;  /* más pequeño */
+  font-size: 1rem;  /* más pequeño */
   opacity: 0.7;        /* un poco más sutil */
 }
 
 .project-text .see-more {
-  font-size: 2rem;   /* más pequeño que el texto principal */
+  font-size: 1rem;   /* más pequeño que el texto principal */
   display: inline-block;
   margin-top: 1rem;    /* separa de párrafo */
   text-decoration: none;
@@ -412,6 +412,7 @@ body {
     margin-bottom: 2rem;
   }
 }
+
 
 
 
