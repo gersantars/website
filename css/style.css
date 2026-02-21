@@ -245,7 +245,7 @@ body {
 
 .accordion-header {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.6rem;   /* controla la distancia */
   padding: 3px 0;
   cursor: pointer;
@@ -412,6 +412,7 @@ body {
     margin-bottom: 2rem;
   }
 }
+
 
 
 
