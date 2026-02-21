@@ -226,6 +226,18 @@ body {
   border-bottom: 1px solid rgba(0,0,0,0.15);
 }
 
+.accordion-item h1 {
+  font-size: 45px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 800;
+}
+
+.accordion-item subtitle {
+  font-size: 45px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 700;
+}
+
 .accordion-header {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -339,6 +351,7 @@ body {
   margin: 0 0 2rem 0;
   opacity: 0.85;
 }
+
 
 
 
