@@ -247,7 +247,7 @@ body {
   display: flex;
   align-items: baseline;
   gap: 1.2rem;   /* controla la distancia */
-  padding: 12px 0;
+  padding: 3px 0;
   cursor: pointer;
   background: transparent;
 
@@ -262,14 +262,20 @@ body {
 }
 
 
-.accordion-header .subtitle {
-  max-width: 420px;     /* evita que empuje todo */
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 1.05rem;      /* más grande que body, menor que H1 */
-  font-weight: 500;
-  opacity: 0.75;
-  white-space: nowrap;    /* evita saltos raros */
-}
+
+/* color del texto de las barras del acordeón */
+.about-header h1,
+.about-header .subtitle { color: #b30000; }
+
+.projects-header h1,
+.projects-header .subtitle { color: #0044b3; }
+
+.draw-header h1,
+.draw-header .subtitle { color: #008000; }
+
+
+
+
 
 /* ABOUT FULLSCREEN */
 .about .accordion-content {
@@ -376,6 +382,7 @@ body {
     margin-bottom: 2rem;
   }
 }
+
 
 
 
