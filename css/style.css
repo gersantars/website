@@ -271,7 +271,10 @@ body {
 /* color del texto de las barras del acordeón */
 
 .accordion-item.about .accordion-header {
-  background: black;
+  background: linear-gradient(
+    to bottom,
+    black,
+    transparent
 }
 
 .accordion-item.about h1,
@@ -285,7 +288,10 @@ body {
 }
 
 .accordion-item.projects .accordion-header {
-  background: transparent;
+    background: linear-gradient(
+    to bottom,
+    rgba(179, 172, 227, 0.5),
+    transparent
 }
 
 .accordion-item.projects h1,
@@ -294,7 +300,10 @@ body {
 }
 
 .accordion-item.draw .accordion-header {
-  background: black;
+    background: linear-gradient(
+    to bottom,
+    black,
+    transparent
 }
 
 .accordion-item.draw h1,
@@ -411,6 +420,7 @@ body {
     margin-bottom: 2rem;
   }
 }
+
 
 
 
