@@ -327,7 +327,7 @@ body {
   .about-video-wrapper {
     height: auto;
     min-height: 60vh;
-    background-image: url("images/about-poster.jpg");
+    background-image: url("aboutimages/about-poster.webp");
     background-size: cover;
     background-position: center;
   }
@@ -374,6 +374,7 @@ body {
     margin-bottom: 2rem;
   }
 }
+
 
 
 
