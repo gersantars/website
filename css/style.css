@@ -231,7 +231,7 @@ body {
   grid-template-columns: auto 1fr;
   gap: 2rem;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   cursor: pointer;
   background: #fff;
 }
@@ -246,9 +246,9 @@ body {
 }
 
 .accordion-header .subtitle {
-  font-size: 16px;
+  font-size: 25px;
   font-family: 'Source Sans 3', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   opacity: 0.9;
 }
 
@@ -338,6 +338,7 @@ body {
   margin: 0 0 2rem 0;
   opacity: 0.85;
 }
+
 
 
 
