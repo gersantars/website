@@ -246,7 +246,7 @@ body {
 .accordion-header {
   display: flex;
   align-items: baseline;
-  gap: 1.2rem;   /* controla la distancia */
+  gap: 0.6rem;   /* controla la distancia */
   padding: 3px 0;
   cursor: pointer;
   background: transparent;
@@ -257,28 +257,50 @@ body {
   font-family: 'Source Sans 3', sans-serif;
   font-size: clamp(3rem, 5vw, 4.8rem);
   font-weight: 900;
+  line-height: 1;
   letter-spacing: 0.02em;
   margin: 0;
 }
 
+.accordion-header .subtitle {
+  font-size: 1.2rem;
+  line-height: 1.1;
+  opacity: 0.8;
+}
 
 
 /* color del texto de las barras del acordeón */
-.about-header h1,
-.about-header .subtitle { 
-  color: #ffffff; 
-  background: #000000;
+
+.accordion-item.about .accordion-header {
+  background: black;
 }
 
-.projects-header h1,
-.projects-header .subtitle { 
-  color: #000000; 
+.accordion-item.about h1,
+.accordion-item.about .subtitle {
+  color: white;
 }
 
-.draw-header h1,
-.draw-header .subtitle { 
-  color: #ffffff; 
-  background: #000000;
+.accordion-item.about .accordion-header:hover {
+  background-blend-mode: multiply;
+  filter: brightness(0.95);
+}
+
+.accordion-item.projects .accordion-header {
+  background: transparent;
+}
+
+.accordion-item.projects h1,
+.accordion-item.projects .subtitle {
+  color: black;
+}
+
+.accordion-item.draw .accordion-header {
+  background: black;
+}
+
+.accordion-item.draw h1,
+.accordion-item.draw .subtitle {
+  color: white;
 }
 
 
@@ -369,13 +391,13 @@ body {
 
 
 .about-title {
-  font-size: clamp(3.5rem, 8vw, 8rem);
-  margin-top: 2rem;      /* aire arriba */
-  margin-bottom: 1rem;
+  font-size: clamp(3.5rem, 6vw, 6rem);
+  margin-top: 0.5rem;      /* aire arriba */
+  margin-bottom: 0.5rem;
 }
 
 .about-subtitle {
-  font-size: clamp(2.5rem, 6vw, 6rem);
+  font-size: clamp(2.5rem, 4vw, 4rem);
   margin-bottom: 1rem;
   letter-spacing: 0.12em;
 }
@@ -390,6 +412,7 @@ body {
     margin-bottom: 2rem;
   }
 }
+
 
 
 
