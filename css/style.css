@@ -224,6 +224,7 @@ body {
 
 .accordion-item {
   border-bottom: 1px solid rgba(0,0,0,0.15);
+  padding: 80px 30px;
 }
 
 .accordion-item h1 {
@@ -350,6 +351,7 @@ body {
   margin: 0 0 2rem 0;
   opacity: 0.85;
 }
+
 
 
 
