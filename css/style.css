@@ -228,6 +228,7 @@ body {
 
 .accordion-item {
   border-bottom: 1px solid rgba(0,0,0,0.15);
+  padding: 90px 0;
 }
 
 .accordion-item h1 {
@@ -245,23 +246,24 @@ body {
 .accordion-header {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
-  gap: 2rem;
+  gap: 1.2rem;   /* controla la distancia */
   padding: 12px 0;
   cursor: pointer;
   background: transparent;
+
 }
 
 .accordion-header h1 {
-  margin: 0;
-  font-size: 45px;
   font-family: 'Source Sans 3', sans-serif;
+  font-size: clamp(3rem, 5vw, 4.8rem);
   font-weight: 900;
   letter-spacing: 0.02em;
-}
+  margin: 0;
 }
 
+
 .accordion-header .subtitle {
+  max-width: 420px;     /* evita que empuje todo */
   font-family: 'Source Sans 3', sans-serif;
   font-size: 1.05rem;      /* más grande que body, menor que H1 */
   font-weight: 500;
