@@ -1,4 +1,8 @@
 /* BODY Y NAV */
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -219,7 +223,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 16px 30px; /* antes era 30px */
+  padding: 0;
 }
 
 .accordion-item {
@@ -239,14 +243,13 @@ body {
 }
 
 .accordion-header {
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
   gap: 2rem;
-  align-items: center;
-  padding: 10px;
+  padding: 12px 0;
   cursor: pointer;
-  background: #fff;
-  font-family: 'Source Sans 3', sans-serif;
+  background: transparent;
 }
 
 .accordion-header h1 {
@@ -259,10 +262,11 @@ body {
 }
 
 .accordion-header .subtitle {
-  font-size: 45px;
   font-family: 'Source Sans 3', sans-serif;
-  font-weight: 600;
-  opacity: 0.9;
+  font-size: 1.05rem;      /* más grande que body, menor que H1 */
+  font-weight: 500;
+  opacity: 0.75;
+  white-space: nowrap;    /* evita saltos raros */
 }
 
 /* ABOUT FULLSCREEN */
@@ -316,6 +320,7 @@ body {
   line-height: 1.7;
   color: #fff;
   text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  padding: 120px 30px 80px;
 }
 
 @media (max-width: 600px) {
@@ -334,24 +339,41 @@ body {
   .about-content {
     padding: 60px 20px;
   }
+    .accordion-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .accordion-header .subtitle {
+    font-size: 0.85rem;
+    white-space: normal;   /* ahora sí puede partir líneas */
+  }
 }
 
 
 .about-title {
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  font-weight: 800;
-  line-height: 1;
-  margin: 0 0 0.5rem 0;
+  font-size: clamp(3.5rem, 6vw, 6rem);
+  margin-top: 2rem;      /* aire arriba */
+  margin-bottom: 1rem;
 }
 
 .about-subtitle {
-  font-size: clamp(1.2rem, 2.5vw, 2rem);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  margin: 0 0 2rem 0;
-  opacity: 0.85;
+  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+  margin-bottom: 3rem;
+  letter-spacing: 0.12em;
 }
 
+@media (max-width: 600px) {
+  .about-title {
+    font-size: 2.4rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+}
 
 
 
