@@ -307,7 +307,7 @@ body {
 /* color del texto de las barras del acordeón */
 
 .accordion-item.about .accordion-header {
-  background: transparent;
+  background: rgb(108, 26, 240);
 }
 
 .accordion-item.about h1,
@@ -475,6 +475,7 @@ body {
     margin-bottom: 2rem;
   }
 }
+
 
 
 
