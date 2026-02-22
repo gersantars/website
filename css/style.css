@@ -342,15 +342,19 @@ body {
 .accordion-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.6s ease, padding 0.6s ease;
-  
-  position: absolute;
-  top: auto;
-  left: 0;
-  width: 100%;
-  height: calc(100vh - var(--header-height));
+  transition: max-height 0.6s ease;
+}
+.accordion-content.open {
+  max-height: 100vh;
+}
+
+.accordion-content.open {
   overflow-y: auto;
-  max-height: none;
+}
+
+.projects .accordion-content,
+.archive .accordion-content {
+  overflow-y: auto;
 }
 
 :root {
@@ -359,13 +363,11 @@ body {
 
 
 .about-video-wrapper {
-  position: sticky;
+  position: relative;
   width: 100%;
   height: 100vh;           /* PANTALLA COMPLETA */
   overflow: hidden;
   padding: 0;
-  
-  top: 0;
   height: 100vh;
 }
 
@@ -454,6 +456,7 @@ body {
     margin-bottom: 2rem;
   }
 }
+
 
 
 
