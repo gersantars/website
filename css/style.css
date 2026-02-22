@@ -62,6 +62,21 @@ body {
   transition: background 0.2s ease, color 0.2s ease;
 }
 
+.filter button:focus,
+.filter button:active,
+.filter button:visited {
+  color: #111;
+}
+
+@media (max-width: 600px) {
+  .filter button:not(.active):active {
+    background: #111;
+    color: white;
+  }
+}
+
+
+
 /* Hover SOLO para botones que NO están activos */ 
 .filter button:not(
   .active):hover { 
@@ -413,6 +428,7 @@ body {
     margin-bottom: 2rem;
   }
 }
+
 
 
 
