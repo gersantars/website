@@ -52,23 +52,31 @@ projects.forEach(project => {
 });
 
 
+
+
 // ============================
-// MAIN PAGE ACCORDION
+// MAIN PAGE ACCORDION (VIEWPORT CONTROLLED)
 // ============================
 
-const headers = document.querySelectorAll(".accordion-header");
+const accordionItems = document.querySelectorAll(".accordion-item");
 
-headers.forEach(header => {
+accordionItems.forEach(item => {
+  const header = item.querySelector(".accordion-header");
+  const content = item.querySelector(".accordion-content");
+
   header.addEventListener("click", () => {
-    const item = header.parentElement;
-    const content = item.querySelector(".accordion-content");
+    const isActive = item.classList.contains("active");
 
-    // cerrar todos los demás
-    document.querySelectorAll(".accordion-content").forEach(c => {
-      if (c !== content) c.classList.remove("open");
+    // cerrar todos
+    accordionItems.forEach(i => {
+      i.classList.remove("active");
+      i.querySelector(".accordion-content")?.classList.remove("open");
     });
 
-    // abrir / cerrar este
-    content.classList.toggle("open");
+    // si no estaba activo, abrirlo
+    if (!isActive) {
+      item.classList.add("active");
+      content.classList.add("open");
+    }
   });
 });
