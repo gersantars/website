@@ -3,6 +3,11 @@ html, body {
   overflow-x: hidden;
 }
 
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -248,7 +253,7 @@ body {
   width: 100%;
   padding: 0;
   position: relative;
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
 }
 
@@ -277,6 +282,7 @@ body {
   gap: 0.6rem;   /* controla la distancia */
   padding: 3px 0;
   cursor: pointer;
+  flex-shrink: 0;
   background: transparent;
 
 }
@@ -340,12 +346,12 @@ body {
   padding: 0;              /* elimina padding del acordeón */
 }
 .accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.6s ease;
+  flex: 1;
+  overflow-y: auto;
+  display: none;
 }
 .accordion-content.open {
-  max-height: 100vh;
+  display: block;
 }
 
 .accordion-content.open {
@@ -456,6 +462,7 @@ body {
     margin-bottom: 2rem;
   }
 }
+
 
 
 
