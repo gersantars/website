@@ -278,7 +278,7 @@ body {
 .accordion-header {
   display: flex;
   align-items: center;
-  gap: 0.6rem;   /* controla la distancia */
+  gap: 0.3rem;   /* controla la distancia */
   padding: 3px 0;
   cursor: pointer;
   flex-shrink: 0;
@@ -290,7 +290,7 @@ body {
 
 .accordion-header h1 {
   font-family: 'Source Sans 3', sans-serif;
-  font-size: clamp(3rem, 5vw, 4.8rem);
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
   font-weight: 900;
   line-height: 1;
   letter-spacing: 0.02em;
@@ -298,7 +298,7 @@ body {
 }
 
 .accordion-header .subtitle {
-  font-size: 1.2rem;
+  font-size: 2rem;
   line-height: 1.1;
   opacity: 0.8;
 }
@@ -378,7 +378,7 @@ body {
 }
 
 :root {
-  --header-height: 110px; /* AJUSTA AL ALTO REAL DE TUS BARRAS */
+  --header-height: 80px; /* AJUSTA AL ALTO REAL DE TUS BARRAS */
 }
 
 
@@ -467,14 +467,15 @@ body {
 
 @media (max-width: 600px) {
   .about-title {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
   }
 
   .about-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.7rem;
     margin-bottom: 2rem;
   }
 }
+
 
 
 
