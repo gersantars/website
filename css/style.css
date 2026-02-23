@@ -26,11 +26,14 @@ body {
 .projects {
   flex: unset;
   pointer-events: auto;
-  background: linear-gradient(
+background: linear-gradient(
     to top,
     rgba(179, 172, 227, 0.5),
     rgba(255, 255, 255, 0)
   );
+  background-repeat: no-repeat;
+  background-size: 100% 25%;
+  background-position: bottom;
 }
 
 
@@ -137,7 +140,7 @@ body {
   display: inline-block;
   margin-top: 1rem;    /* separa de párrafo */
   text-decoration: none;
-  color: #111;
+  color: rgb(108, 26, 240);
   font-weight: bold;
 }
 
@@ -307,7 +310,7 @@ body {
 /* color del texto de las barras del acordeón */
 
 .accordion-item.about .accordion-header {
-  background: rgb(108, 26, 240);
+  background: black;
 }
 
 .accordion-item.about h1,
@@ -475,6 +478,7 @@ body {
     margin-bottom: 2rem;
   }
 }
+
 
 
 
