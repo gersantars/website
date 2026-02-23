@@ -137,7 +137,7 @@ body {
   display: inline-block;
   margin-top: 1rem;    /* separa de párrafo */
   text-decoration: none;
-  color: rgb(108, 26, 240);
+  color: #111;
   font-weight: bold;
 }
 
@@ -307,7 +307,7 @@ body {
 /* color del texto de las barras del acordeón */
 
 .accordion-item.about .accordion-header {
-    background: white
+  background: rgb(108, 26, 240);
 }
 
 .accordion-item.about h1,
