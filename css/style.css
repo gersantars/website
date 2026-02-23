@@ -265,6 +265,10 @@ background: linear-gradient(
   position: relative;
   flex-shrink: 0;
 }
+.accordion-item:has(.accordion-content.open)
+  .accordion-header::after {
+  opacity: 1;
+}
 
 .accordion-item h1 {
   font-size: 45px;
@@ -442,6 +446,7 @@ background: linear-gradient(
     padding: 60px 20px;
   }
     .accordion-header {
+    position: relative;
     flex-direction: column;
     align-items: flex-start;
     gap: 0.4rem;
@@ -453,6 +458,25 @@ background: linear-gradient(
     font-size: 0.85rem;
     white-space: normal;   /* ahora sí puede partir líneas */
   }
+}
+
+.accordion-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 40px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(245, 245, 245, 0)
+  );
+
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 
@@ -478,6 +502,7 @@ background: linear-gradient(
     margin-bottom: 2rem;
   }
 }
+
 
 
 
