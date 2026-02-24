@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .querySelectorAll(".accordion-content")
+    .forEach(c => c.classList.remove("open"));
+});
+
 // ============================
 // PROJECT FILTER BUTTONS
 // ============================
@@ -80,3 +86,4 @@ accordionItems.forEach(item => {
     }
   });
 });
+
