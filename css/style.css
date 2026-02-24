@@ -281,7 +281,7 @@ background: linear-gradient(
   display: flex;
   align-items: center;
   gap: 0.3rem;   /* controla la distancia */
-  padding: 3px 0;
+  padding: 1px 0;
   cursor: pointer;
   flex-shrink: 0;
   background: transparent;
@@ -380,7 +380,7 @@ background: linear-gradient(
 }
 
 :root {
-  --header-height: 80px; /* AJUSTA AL ALTO REAL DE TUS BARRAS */
+  --header-height: 60px; /* AJUSTA AL ALTO REAL DE TUS BARRAS */
 }
 
 
@@ -479,6 +479,7 @@ background: linear-gradient(
     margin-bottom: 2rem;
   }
 }
+
 
 
 
