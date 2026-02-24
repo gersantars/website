@@ -458,18 +458,19 @@ background: linear-gradient(
 
 
 .about-title {
+  font-family: 'Source Sans 3', sans-serif;
   font-size: clamp(3.8rem, 6vw, 6.2rem);
-  margin-top: 0rem;      /* aire arriba */
-  margin-bottom: 0.2rem;
   font-weight: 800;
+  margin-bottom: 0.05rem;
 }
 
 .about-subtitle {
+  font-family: 'Source Sans 3', sans-serif;
   font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+  font-weight: 400;              
+  letter-spacing: 0.04em;        /* menos agresivo */
+  opacity: 0.7;
   margin-top: 0;
-  margin-bottom: 1.2rem;
-  letter-spacing: 0.08em;
-  opacity: 0.85;
 }
 
 @media (max-width: 600px) {
@@ -483,6 +484,7 @@ background: linear-gradient(
     margin-bottom: 1.5rem;
   }
 }
+
 
 
 
