@@ -151,8 +151,8 @@ background: linear-gradient(
 
 /* DETAILS ACORDEÓN */
 .project-details {
- / max-height: 400px;/      /* altura máxima visible del detalle */
-  /overflow-y: auto; /      /* scroll solo aquí */
+ /* max-height: 400px;    altura máxima visible del detalle */
+  /*overflow-y: auto;      scroll solo aquí */
   max-height: 0;           /* altura máxima visible del detalle */
   overflow: hidden;       /* scroll solo aquí */
   padding: 0 0;
@@ -556,6 +556,7 @@ background: linear-gradient(
     font-size: 1rem;
   }
 }
+
 
 
 
