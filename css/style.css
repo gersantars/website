@@ -489,6 +489,77 @@ background: linear-gradient(
   }
 }
 
+/* PROJECT MODAL */
+.project-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: none;
+}
+
+.project-modal.active {
+  display: block;
+}
+
+/* fondo oscuro */
+.project-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(4px);
+}
+
+/* ventana */
+.project-modal-window {
+  position: relative;
+  width: 85vw;
+  height: 85vh;
+  margin: auto;
+  top: 7.5vh;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* cerrar */
+.project-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* contenido scrollable */
+.project-modal-content {
+  padding: 80px 60px 60px;
+  overflow-y: auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .project-modal-window {
+    width: 95vw;
+    height: 90vh;
+    top: 5vh;
+    border-radius: 8px;
+  }
+
+  .project-modal-content {
+    padding: 70px 24px 40px;
+    font-size: 1rem;
+  }
+}
 
 
 
