@@ -115,12 +115,34 @@
                   What if what moves us is nothing more than the collaboration of these agents
                   in deep strata that pulsate under our skin?
                 </p>
-                <a class="see-more" href="#">See more →</a>
+                <a class="see-more" 
+                  href="#"
+                  data-project="ecosistemas"
+                  >
+                  See more →
+                
+                </a>
               </div>
 
             </div>
           </div>
         </div>
+
+        <div class="project-modal-data" id="project-ecosistemas" hidden>
+  <h2>Ecosistemas Minerales</h2>
+
+  <section>
+    <p>
+      Extended project description goes here.  
+      Puedes escribir largo, esto es scrollable.
+    </p>
+  </section>
+
+  <section>
+    <img src="projectsimages/ecosistemasminerales1.webp" alt="">
+    <img src="projectsimages/ecosistemasminerales2.webp" alt="">
+  </section>
+</div>
 
         <!-- PROJECT 2 -->
         <div class="project" data-category="all">
@@ -147,13 +169,27 @@ since the beginning of European colonialism and
 finally become an exotic object that has been
 brought to other territories to be domesticated.
                 </p>
-                <a class="see-more" href="#">See more →</a>
+                <a class="see-more" href="#"data-project="orquidarium">See more →</a>
               </div>
 
             </div>
           </div>
         </div>
+<div class="project-modal-data" id="project-orquidarium" hidden>
+  <h2>Orquidarium</h2>
 
+  <section>
+    <p>
+      Extended project description goes here.  
+      Puedes escribir largo, esto es scrollable.
+    </p>
+  </section>
+
+  <section>
+    <img src="projectsimages/orquidarium.webp" alt="">
+    <img src="projectsimages/orquidarium2.webp" alt="">
+  </section>
+</div>
         <!-- PROJECT 3 -->
         <div class="project" data-category="all">
           <div class="projects-table row">
@@ -178,7 +214,7 @@ appearances. In this case, the act of revealing the
 mythical aspect of love appears in the production
 of three models of an intimate domestic space.
                 </p>
-                <a class="see-more" href="#">See more →</a>
+                <a class="see-more" href="#"data-project="fragile">See more →</a>
               </div>
 
             </div>
@@ -186,7 +222,21 @@ of three models of an intimate domestic space.
         </div>
 
       </main>
+<div class="project-modal-data" id="project-fragile" hidden>
+  <h2>Fragile</h2>
 
+  <section>
+    <p>
+      Extended project description goes here.  
+      Puedes escribir largo, esto es scrollable.
+    </p>
+  </section>
+
+  <section>
+    <img src="projectsimages/fragile1.webp" alt="">
+    <img src="projectsimages/fragile2.webp" alt="">
+  </section>
+</div>
     </div>
   </div>
 
@@ -205,8 +255,22 @@ of three models of an intimate domestic space.
 </div>
 
 <script src="js/script.js"></script>
+
+  <div class="project-modal" id="projectModal">
+  <div class="project-modal-overlay"></div>
+
+  <div class="project-modal-window">
+    <button class="project-modal-close" aria-label="Close">✕</button>
+
+    <div class="project-modal-content">
+      <!-- AQUÍ SE INYECTA EL CONTENIDO DEL PROYECTO -->
+    </div>
+  </div>
+</div>
+  
 </body>
 </html>
+
 
 
 
