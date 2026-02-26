@@ -59,9 +59,8 @@ projects.forEach(project => {
 
 
 
-
 // ============================
-// MAIN PAGE ACCORDION (VIEWPORT CONTROLLED)
+// MAIN PAGE ACCORDION
 // ============================
 
 const accordionItems = document.querySelectorAll(".accordion-item");
@@ -73,20 +72,23 @@ accordionItems.forEach(item => {
   header.addEventListener("click", () => {
     const isActive = item.classList.contains("active");
 
-    // cerrar todos
     accordionItems.forEach(i => {
       i.classList.remove("active");
       i.querySelector(".accordion-content")?.classList.remove("open");
     });
 
-    // si no estaba activo, abrirlo
     if (!isActive) {
       item.classList.add("active");
       content.classList.add("open");
     }
   });
+});
 
-  const modal = document.getElementById("projectModal");
+// ============================
+// PROJECT MODAL
+// ============================
+
+const modal = document.querySelector(".project-modal");
 const modalContent = modal.querySelector(".project-modal-content");
 const closeBtn = modal.querySelector(".project-modal-close");
 const overlay = modal.querySelector(".project-modal-overlay");
@@ -114,6 +116,4 @@ function closeModal() {
 
 closeBtn.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
-});
-
 
