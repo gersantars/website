@@ -131,6 +131,7 @@ background: linear-gradient(
 .projects-table.row span:first-child {  /* fecha */
   font-size: 1rem;  /* más pequeño */
   opacity: 0.7;        /* un poco más sutil */
+  color: rgb(108, 26, 240)
 }
 
 .project-text .see-more {
@@ -488,6 +489,7 @@ background: linear-gradient(
     margin-bottom: 1.5rem;
   }
 }
+
 
 
 
