@@ -89,15 +89,12 @@ background: linear-gradient(
 }
 
 
-
 /* Hover SOLO para botones que NO están activos */ 
 .filter button:not(
   .active):hover { 
   background: #111; 
   color: white; 
 }
-
-
 
 .filter button.active {
   background: rgba(189, 187, 246, 0.45);
@@ -121,6 +118,8 @@ background: linear-gradient(
   grid-template-columns: 80px 1fr 200px;
   gap: 2rem;
   align-items: center;
+  letter-spacing: 0.01em;
+  font-size: 1rem;
   padding: 0.8rem 0;
   border-bottom: 1px solid rgba(0,0,0,0.2);
   background: transparent;
@@ -157,8 +156,7 @@ background: linear-gradient(
   overflow-y: auto;       /* scroll solo aquí */
   padding: 20px 0;
   transition: max-height 0.5s ease, padding 0.5s ease; 
-  
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.65;
   letter-spacing: 0.01em;
   grid-column:1/-1;
@@ -181,7 +179,6 @@ background: linear-gradient(
   padding: 20px 0;
 }
 
-
 .project-text {
   display: flex;
   flex-direction: column;
@@ -194,7 +191,6 @@ background: linear-gradient(
   height: auto;
   margin-right: 10px;
 }
-
 
 .projectsimages img { 
   width: 100%; 
@@ -246,7 +242,6 @@ background: linear-gradient(
     grid-template-columns: 1fr;
   }
 }
-
 
 .accordion {
   display: flex;
@@ -340,10 +335,6 @@ background: linear-gradient(
   color: white;
 }
 
-
-
-
-
 /* ABOUT FULLSCREEN */
 .accordion-content {
   max-height: 0;
@@ -359,7 +350,6 @@ background: linear-gradient(
   opacity: 1;
   overflow: hidden;
 }
-
 
 .about .accordion-content {
   position: relative;
@@ -498,6 +488,7 @@ background: linear-gradient(
     margin-bottom: 1.5rem;
   }
 }
+
 
 
 
