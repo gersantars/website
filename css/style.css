@@ -90,8 +90,7 @@ background: linear-gradient(
 
 
 /* Hover SOLO para botones que NO están activos */ 
-.filter button:not(
-  .active):hover { 
+.filter button:not(.active):hover { 
   background: #111; 
   color: white; 
 }
@@ -152,18 +151,16 @@ background: linear-gradient(
 
 /* DETAILS ACORDEÓN */
 .project-details {
-  max-height: 400px;      /* altura máxima visible del detalle */
-  overflow-y: auto;       /* scroll solo aquí */
-  padding: 20px 0;
+ / max-height: 400px;/      /* altura máxima visible del detalle */
+  /overflow-y: auto; /      /* scroll solo aquí */
+  max-height: 0;           /* altura máxima visible del detalle */
+  overflow: hidden;       /* scroll solo aquí */
+  padding: 0 0;
   transition: max-height 0.5s ease, padding 0.5s ease; 
   font-size: 1rem;
   line-height: 1.65;
   letter-spacing: 0.01em;
-  grid-column:1/-1;
-  max-height: 0;
-  overflow: hidden;
-  padding:0 0;
-  transition: max-height 0.5s ease, padding 0.5s ease; 
+  grid-column: 1 / -1;
 }
 
 /* GRID INTERNO DEL DESPLEGABLE — DESKTOP */
@@ -249,7 +246,7 @@ background: linear-gradient(
   width: 100%;
   padding: 0;
   position: relative;
-  height: 100dvh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -346,7 +343,7 @@ background: linear-gradient(
 }
 
 .accordion-content.open {
-  max-height: calc(100dvh - 3 * var(--header-height));
+  max-height: calc(100vh - 3 * var(--header-height));
   opacity: 1;
   overflow: hidden;
 }
@@ -355,7 +352,7 @@ background: linear-gradient(
   position: relative;
   height: 100%;
   padding: 0;              /* elimina padding del acordeón */
-  height: calc(100dvh - 3 * var(--header-height));
+  height: calc(100vh - 3 * var(--header-height));
 }
 .accordion-content {
   flex: 1;
@@ -424,7 +421,6 @@ background: linear-gradient(
   text-shadow: 0 2px 10px rgba(0,0,0,0.4);
   padding: 120px 30px 80px;
   background: none;
-  color: white;
 }
 
 .about-content p {
@@ -560,6 +556,7 @@ background: linear-gradient(
     font-size: 1rem;
   }
 }
+
 
 
 
