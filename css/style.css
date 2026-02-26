@@ -354,8 +354,9 @@ background: linear-gradient(
   padding: 0;              /* elimina padding del acordeón */
   height: calc(100vh - 3 * var(--header-height));
 }
-.accordion-content {
-  flex: 1;
+.accordion-item.projects .accordion-content.open,
+.accordion-item.draw .accordion-content.open {
+  max-height: calc(100vh - 3 * var(--header-height));
   overflow-y: auto;
 }
 
@@ -556,6 +557,7 @@ background: linear-gradient(
     font-size: 1rem;
   }
 }
+
 
 
 
