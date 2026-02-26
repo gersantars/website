@@ -20,234 +20,12 @@ body {
   flex-direction: column;
 }
 
-
-/* STATES */
-.projects {
-  flex: unset;
-  pointer-events: auto;
-background: linear-gradient(
-    to top,
-    rgba(179, 172, 227, 0.5),
-    rgba(255, 255, 255, 0)
-  );
-  background-repeat: no-repeat;
-  background-size: 100% 25%;
-  background-position: bottom;
-}
-
-
-.projects .accordion-content,
-.archive .accordion-content {
-  overflow-y: auto;
-  height: calc(100vh - var(--header-height));
-}
-
-
 /* CONTENT */
 .content {
   margin-top: 40px;
 }
 
-/* PROJECTS */
-.projects-index {
-  max-width: 1000px;
-  margin: auto;
-  padding: 0 0.5rem;
-}
-
-/* FILTER */
-.filter {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 20px;
-}
-
-.filter button {
-  background: none;
-  color: #111;
-  border: 1px solid #111;
-  border-radius: 20px;
-  padding: 6px 14px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-.filter button:focus,
-.filter button:active,
-.filter button:visited {
-  color: #111;
-}
-
-@media (max-width: 600px) {
-  .filter button:not(.active):active {
-    background: #111;
-    color: white;
-  }
-}
-
-
-
-/* Hover SOLO para botones que NO están activos */ 
-.filter button:not(
-  .active):hover { 
-  background: #111; 
-  color: white; 
-}
-
-
-
-.filter button.active {
-  background: rgba(189, 187, 246, 0.45);
-  box-shadow:
-    0 8px 16px rgba(230, 255, 43,0.4),
-    0 1px 0 rgba(201, 255, 54,0.6) inset;
-  border-color: rgba(0,0,0,0.5);
-  transform: translateY(-2px);
-}
-
-/* TABLA DE PROYECTOS */
-.projects-table.header,
-.projects-table.row,
-.projects-table.row span,
-.projects-table.header span {
-  background: transparent;
-}
-.projects-table.header,
-.projects-table.row {
-  display: grid;
-  grid-template-columns: 80px 1fr 200px;
-  gap: 2rem;
-  align-items: center;
-  padding: 0.8rem 0;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
-  background: transparent;
-  position: sticky;   /* hace que permanezca visible si quieres */
-  top: 0;             /* opcional */
-  z-index: 1;         /* que esté arriba del scroll */
-}
-
-.projects-table.row span:first-child {  /* fecha */
-  font-size: 1rem;  /* más pequeño */
-  opacity: 0.7;        /* un poco más sutil */
-}
-
-.project-text .see-more {
-  font-size: 1rem;   /* más pequeño que el texto principal */
-  display: inline-block;
-  margin-top: 1rem;    /* separa de párrafo */
-  text-decoration: none;
-  color: rgb(108, 26, 240);
-  font-weight: bold;
-}
-
-/* Encabezados */ 
-.projects-table.header span { 
-  font-weight: bold; } 
-/* Clickable titles */ 
-.projects-table.row span{ 
-  cursor: pointer; 
-}
-
-/* DETAILS ACORDEÓN */
-.project-details {
-  max-height: 400px;      /* altura máxima visible del detalle */
-  overflow-y: auto;       /* scroll solo aquí */
-  padding: 20px 0;
-  transition: max-height 0.5s ease, padding 0.5s ease; 
-  
-  font-size: 1.1rem;
-  line-height: 1.65;
-  letter-spacing: 0.01em;
-  grid-column:1/-1;
-  max-height: 0;
-  overflow: hidden;
-  padding:0 0;
-  transition: max-height 0.5s ease, padding 0.5s ease; 
-}
-
-/* GRID INTERNO DEL DESPLEGABLE — DESKTOP */
-.project-details.open {
-  max-height: 1500px; 
-  padding:20px 0; 
-}
-
-.project-details-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding: 20px 0;
-}
-
-
-.project-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* empuja See more al final */
-}
-
-/* IMAGES */
-.projectsimages img {
-  width: 100%;
-  height: auto;
-  margin-right: 10px;
-}
-
-
-.projectsimages img { 
-  width: 100%; 
-  height: auto; 
-  object-fit: cover; } 
-
-/* RESPONSIVE PARA MÓVILES */ 
-
-@media (max-width: 600px) { 
-/* GRID INTERNO DEL DESPLEGABLE — MÓVILES */
-  .project-details-grid { 
-    grid-template-columns: 1fr; 
-    } 
-  
-    /* UNA SOLA COLUMNA */ 
-  
-  /* TEXTO */
-  .project-text { order: 1; /* texto primero */  
-  } 
-  .project-text p {
-  font-size: 1.25rem;  /* más grande que 1.1rem */
-  color: #111;          /* negro sólido */
-  line-height: 1.7;     /* un poco más espacioso */
-}
-  
-  
- /* IMÁGENES */ 
-  .projectsimages { 
-    order: 2; /* imágenes después */ 
-  }
-
-.projectsimages img { 
-  width: 100%; 
-  height: auto; 
-  margin: 0; 
-}
-
-
-  .projects-table.header {
-    display: none;
-  }
-
-  /* Encabezados */ 
-  .projects-table.header span { 
-    font-weight: bold; 
-  }
-
-  .projects-table.row {
-    grid-template-columns: 1fr;
-  }
-}
-
-
+/* BARRAS DEL ACORDEÓN */ 
 .accordion {
   display: flex;
   flex-direction: column;
@@ -341,9 +119,6 @@ background: linear-gradient(
 }
 
 
-
-
-
 /* ABOUT FULLSCREEN */
 .accordion-content {
   max-height: 0;
@@ -360,26 +135,23 @@ background: linear-gradient(
   overflow: hidden;
 }
 
+.accordion-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+:root {
+  --header-height: 60px; /* AJUSTA AL ALTO REAL DE TUS BARRAS */
+}
+
+
+/* ABOUT SECTION */ 
 
 .about .accordion-content {
   position: relative;
   height: 100%;
   padding: 0;              /* elimina padding del acordeón */
   height: calc(100dvh - 3 * var(--header-height));
-}
-.accordion-content {
-  flex: 1;
-  overflow-y: auto;
-}
-
-
-.projects .accordion-content,
-.archive .accordion-content {
-  overflow-y: auto;
-}
-
-:root {
-  --header-height: 60px; /* AJUSTA AL ALTO REAL DE TUS BARRAS */
 }
 
 .about-scroll {
@@ -470,7 +242,7 @@ background: linear-gradient(
   }
 }
 
-
+/* ABOUT SECTION CONTENT */ 
 .about-title {
   font-family: 'Source Sans 3', sans-serif;
   font-size: clamp(3.8rem, 6vw, 6.2rem);
@@ -487,6 +259,7 @@ background: linear-gradient(
   margin-top: 0;
 }
 
+/* ABOUT SECTION CONTENT FOR CELLPHONE */ 
 @media (max-width: 600px) {
   .about-title {
     font-size: 2.1rem;
@@ -498,6 +271,225 @@ background: linear-gradient(
     margin-bottom: 1.5rem;
   }
 }
+
+/* PROJECTS SECTION STATES */
+.projects {
+  flex: unset;
+  pointer-events: auto;
+background: linear-gradient(
+    to top,
+    rgba(179, 172, 227, 0.5),
+    rgba(255, 255, 255, 0)
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 25%;
+  background-position: bottom;
+}
+
+
+.projects .accordion-content,
+.archive .accordion-content {
+  overflow-y: auto;
+  height: calc(100vh - var(--header-height));
+}
+
+/* PROJECTS */
+.projects-index {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 0.5rem;
+}
+
+/* PROJECTS BUTTON ALL COLLECTIVE MEDIATION */
+/* FILTER */
+.filter {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+
+.filter button {
+  background: none;
+  color: #111;
+  border: 1px solid #111;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.filter button:focus,
+.filter button:active,
+.filter button:visited {
+  color: #111;
+}
+
+@media (max-width: 600px) {
+  .filter button:not(.active):active {
+    background: #111;
+    color: white;
+  }
+}
+
+/* Hover SOLO para botones que NO están activos */ 
+.filter button:not(
+  .active):hover { 
+  background: #111; 
+  color: white; 
+}
+
+.filter button.active {
+  background: rgba(189, 187, 246, 0.45);
+  box-shadow:
+    0 8px 16px rgba(230, 255, 43,0.4),
+    0 1px 0 rgba(201, 255, 54,0.6) inset;
+  border-color: rgba(0,0,0,0.5);
+  transform: translateY(-2px);
+}
+
+/* PROJECTS.TABLA DE PROYECTOS */
+.projects-table.header,
+.projects-table.row,
+.projects-table.row span,
+.projects-table.header span {
+  background: transparent;
+}
+.projects-table.header,
+.projects-table.row {
+  display: grid;
+  grid-template-columns: 80px 1fr 200px;
+  gap: 2rem;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  background: transparent;
+  position: sticky;   /* hace que permanezca visible si quieres */
+  top: 0;             /* opcional */
+  z-index: 1;         /* que esté arriba del scroll */
+}
+
+.projects-table.row span:first-child {  /* fecha */
+  font-size: 1rem;  /* más pequeño */
+  opacity: 0.7;        /* un poco más sutil */
+}
+
+.project-text .see-more {
+  font-size: 1rem;   /* más pequeño que el texto principal */
+  display: inline-block;
+  margin-top: 1rem;    /* separa de párrafo */
+  text-decoration: none;
+  color: rgb(108, 26, 240);
+  font-weight: bold;
+}
+
+/* PROJECTS Encabezados */ 
+.projects-table.header span { 
+  font-weight: bold; } 
+/* Clickable titles */ 
+.projects-table.row span{ 
+  cursor: pointer; 
+}
+
+/* PROJECTS DETAILS ACORDEÓN */
+.project-details {
+  max-height: 400px;      /* altura máxima visible del detalle */
+  overflow-y: auto;       /* scroll solo aquí */
+  padding: 20px 0;
+  transition: max-height 0.5s ease, padding 0.5s ease; 
+  
+  font-size: 1.1rem;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+  grid-column:1/-1;
+  max-height: 0;
+  overflow: hidden;
+  padding:0 0;
+  transition: max-height 0.5s ease, padding 0.5s ease; 
+}
+
+/* PROJECTS GRID INTERNO DEL DESPLEGABLE — DESKTOP */
+.project-details.open {
+  max-height: 1500px; 
+  padding:20px 0; 
+}
+
+.project-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 20px 0;
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* empuja See more al final */
+}
+
+/* PROJECTS IMAGES */
+.projectsimages img {
+  width: 100%;
+  height: auto;
+  margin-right: 10px;
+}
+
+.projectsimages img { 
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; } 
+
+/* RESPONSIVE PARA MÓVILES */ 
+@media (max-width: 600px) { 
+/* GRID INTERNO DEL DESPLEGABLE — MÓVILES */
+  .project-details-grid { 
+    grid-template-columns: 1fr; 
+    } 
+  
+    /* UNA SOLA COLUMNA */ 
+  
+  /* TEXTO */
+  .project-text { order: 1; /* texto primero */  
+  } 
+  .project-text p {
+  font-size: 1.25rem;  /* más grande que 1.1rem */
+  color: #111;          /* negro sólido */
+  line-height: 1.7;     /* un poco más espacioso */
+}
+   
+ /* PROJECTS IMÁGENES */ 
+  .projectsimages { 
+    order: 2; /* imágenes después */ 
+  }
+
+.projectsimages img { 
+  width: 100%; 
+  height: auto; 
+  margin: 0; 
+}
+
+  .projects-table.header {
+    display: none;
+  }
+
+  /* Encabezados */ 
+  .projects-table.header span { 
+    font-weight: bold; 
+  }
+
+  .projects-table.row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.projects .accordion-content,
+.archive .accordion-content {
+  overflow-y: auto;
+}
+
+
 
 
 
