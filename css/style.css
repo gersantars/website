@@ -4,7 +4,7 @@ html, body {
 
 html, body {
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body {
@@ -32,10 +32,10 @@ body {
 .accordion {
   display: flex;
   flex-direction: column;
+  min-height: 100dvh;
   width: 100%;
   padding: 0;
   position: relative;
-  height: 100dvh;
   overflow: hidden;
 }
 
@@ -132,7 +132,8 @@ body {
 }
 
 .accordion-content.open {
-  max-height: 200vh; /* grande a propósito */
+  max-height: calc(100dvh - 3 * var(--header-height));
+  overflow: hidden;
   opacity: 1;
 }
 
@@ -487,6 +488,7 @@ body {
 .archive .accordion-content {
   overflow-y: auto;
 }
+
 
 
 
