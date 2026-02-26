@@ -4,7 +4,7 @@ html, body {
 
 html, body {
   height: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body {
@@ -487,6 +487,7 @@ body {
 .archive .accordion-content {
   overflow-y: auto;
 }
+
 
 
 
