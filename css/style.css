@@ -4,7 +4,7 @@ html, body {
 
 html, body {
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body {
@@ -128,20 +128,12 @@ body {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition:
-    max-height 0.6s ease,
-    opacity 0.3s ease;
+  transition: max-height 0.6s ease, opacity 0.3s ease;
 }
 
 .accordion-content.open {
-  max-height: calc(100dvh - 3 * var(--header-height));
+  max-height: 200vh; /* grande a propósito */
   opacity: 1;
-  overflow: hidden;
-}
-
-.accordion-content {
-  flex: 1;
-  overflow-y: auto;
 }
 
 :root {
@@ -154,9 +146,7 @@ body {
 
 .about .accordion-content {
   position: relative;
-  height: 100%;
-  padding: 0;              /* elimina padding del acordeón */
-  height: calc(100dvh - 3 * var(--header-height));
+  padding: 0;
 }
 
 .about-scroll {
@@ -497,6 +487,7 @@ body {
 .archive .accordion-content {
   overflow-y: auto;
 }
+
 
 
 
