@@ -85,5 +85,35 @@ accordionItems.forEach(item => {
       content.classList.add("open");
     }
   });
+
+  const modal = document.getElementById("projectModal");
+const modalContent = modal.querySelector(".project-modal-content");
+const closeBtn = modal.querySelector(".project-modal-close");
+const overlay = modal.querySelector(".project-modal-overlay");
+
+document.querySelectorAll(".see-more").forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.preventDefault();
+
+    const id = btn.dataset.project;
+    const data = document.getElementById(`project-${id}`);
+
+    if (!data) return;
+
+    modalContent.innerHTML = data.innerHTML;
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  });
 });
+
+function closeModal() {
+  modal.classList.remove("active");
+  modalContent.innerHTML = "";
+  document.body.style.overflow = "";
+}
+
+closeBtn.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+});
+
 
