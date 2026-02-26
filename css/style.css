@@ -84,7 +84,7 @@ body {
 
 .accordion-header .subtitle {
   font-size: 2rem;
-  line-height: 1.1;
+  line-height: 1;
   opacity: 0.8;
 }
 
@@ -322,7 +322,7 @@ body {
   border-radius: 20px;
   padding: 6px 14px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   cursor: pointer;
   font-weight: bold;
   transition: background 0.2s ease, color 0.2s ease;
@@ -371,6 +371,7 @@ body {
   gap: 2rem;
   align-items: center;
   font-size: 1.2rem; 
+  letter-spacing: 0.01em;
   padding: 0.8rem 0;
   border-bottom: 1px solid rgba(0,0,0,0.2);
   background: transparent;
@@ -380,12 +381,12 @@ body {
 }
 
 .projects-table.row span:first-child {  /* fecha */
-  font-size: 1.1rem;  /* más pequeño */
+  font-size: 1rem;  /* más pequeño */
   opacity: 0.7;       /* un poco más sutil */
 }
 
 .project-text .see-more {
-  font-size: 1.1rem;   /* más pequeño que el texto principal */
+  font-size: 1rem;   /* más pequeño que el texto principal */
   display: inline-block;
   margin-top: 1rem;    /* separa de párrafo */
   text-decoration: none;
@@ -407,7 +408,7 @@ body {
   overflow-y: auto;       /* scroll solo aquí */
   padding: 20px 0;
   transition: max-height 0.5s ease, padding 0.5s ease; 
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.65;
   letter-spacing: 0.01em;
   grid-column:1/-1;
@@ -442,9 +443,10 @@ body {
   .project-text { order: 1; /* texto primero */  
   } 
   .project-text p {
-  font-size: 1.1rem;  /* queda en 1.1rem */
+  font-size: 1rem;  /* queda en 1.1rem */
   color: #111;          /* negro sólido */
   line-height: 1.7;     /* un poco más espacioso */
+  letter-spacing: 0.01em;
 }
 
 /* PROJECTS IMAGES */
@@ -495,6 +497,7 @@ body {
 .archive .accordion-content {
   overflow-y: auto;
 }
+
 
 
 
